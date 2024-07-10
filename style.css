@@ -1,33 +1,40 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
 
-body{
+body {
     background: #100;
 }
 
-.card{
+.layout {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+.weather-card {
     width: 90%;
     max-width: 470px;
-    background: linear-gradient(135deg, #f75a89, #d3b34c);
+    background: linear-gradient(135deg, #f75aed, #32c2f2);
     color: #fff;
-    margin: 100px auto 0;
+    margin: 50px auto 0;
     border-radius: 20px;
     padding: 40px 35px;
     text-align: center;
 }
 
-.search{
+.search {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.search input{
+.search input {
     border: 0;
     outline: 0;
     background: #ebfffc;
@@ -40,7 +47,7 @@ body{
     font-size: 18px;
 }
 
-.search button{
+.search button {
     border: 0;
     outline: 0;
     background: #ebfffc;
@@ -54,23 +61,23 @@ body{
     width: 16px;
 }
 
-.weather-icon{
+.weather-icon {
     width: 170px;
     margin-top: 30px;
 }
 
-.weather h1{
+.weather h1 {
     font-size: 80px;
     font-weight: 500;
 }
 
-.weather h2{
+.weather h2 {
     font-size: 45px;
     font-weight: 400;
     margin-top: -10px;
 }
 
-.details{
+.details {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -78,30 +85,141 @@ body{
     margin-top: 50px;
 }
 
-.col{
+.col {
     display:flex;
     align-items: center;
     text-align: left;
 }
 
-.col img{
+.col img {
     width: 40px;
     margin-right: 10px;
 }
 
-.humidity, .wind{
+.humidity, .wind {
     font-size: 26px;
     margin-top: -6px;
 }
 
-.weather{
+.weather {
     display: none;
 }
 
-.error{
+.error {
     text-align: left;
     margin-left: 10px;
     margin-top: 10px;
     font-size: 16px;
     display: none;
+}
+
+
+.todo-card {
+    width: 90%;
+    max-width: 470px;
+    background: linear-gradient(135deg, #f3b23a, #f5eed6);
+    color: #000000;
+    margin: 50px auto 0;
+    border-radius: 20px;
+    padding: 10px 24px;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 470px;
+    background: #fff;
+    margin: 12px auto 20px;
+    padding: 0 30px 70px;
+    border-radius: 10px;
+    
+}
+
+.todo-app h2 {
+    color: #280902;
+    display:flex;
+    align-items: center;
+}
+
+.todo-app h2 img {
+    width: 30px;
+    padding-top: 20px;
+    margin-left: 8px;
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.todo-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+
+.row button {
+    border: none;
+    border-radius: 40px;
+    outline: none;
+    padding: 16px 30px;
+    background: rgb(162, 85, 85);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+ul li {
+    list-style: none;
+    font-size: 20px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-position: center;
+    background-size: cover;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(images/checked.png);
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+}
+
+ul li span:hover {
+    background: #edeef0;
+    border-radius: 30px;
 }
